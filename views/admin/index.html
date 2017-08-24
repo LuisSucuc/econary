@@ -1,0 +1,42 @@
+{{extend 'layout.html'}}
+<div class="row">
+    <h2 class="text-center">{{=T('Manage dictionary')}}</h2>
+    <hr>
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-hover ">
+            <thead>
+                <tr>
+                    <th>{{=T('Word')}}</th>
+                    <th>{{=T('Definition')}}</th>
+                    <th>{{=T('Image')}}</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {{for word in words:}}
+                <tr>
+                    <td>{{=word.word}}</td>
+                    <td>{{=word.definition}}</td>
+                    <td>
+                        <img class="img-responsive center-block"
+                            src="{{=URL('download', args=word.image)}}"
+                            style="width:50px"/>
+                    </td>
+                    <td>
+                        <a class="btn btn-xs btn-info" href="{{=URL('edit',vars=dict(word_id=word.id))}}">{{=T('Edit')}}</a>
+                        <a class="btn btn-xs btn-warning" href="{{=URL('delete',vars=dict(word_id=word.id))}}">{{=T('Delete')}}</a>
+                    </td
+                </tr>
+                {{pass}}
+            </tbody>
+        </table>
+    </div>
+    <!-- Add new element -->
+    <div class="text-center">
+        <a href="{{=URL('edit')}}" class="btn btn-primary ">
+            <i class="glyphicon glyphicon-plus"></i>
+            {{=T('New definition')}}
+        </a>
+    </div>
+</div>

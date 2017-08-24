@@ -127,12 +127,12 @@ auth.settings.reset_password_requires_verification = True
 
 
 db.define_table('dictionary',
-    Field('word',       'string', label = T('Word')),
+    Field('word',       'string', label = T('Word'), unique= True),
     Field('definition', 'text',   label = T('Definition')),
-    Field('image',      'upload', label = T('Image')),
+    Field('image',      'upload', label = T('Image'), autodelete = True),
     format = '%(word)s')
 
-db.dictionary.word.requires       = IS_NOT_EMPTY(error_message=T('Obligatory field'))
+db.dictionary.word.requires       = [IS_NOT_EMPTY(error_message=T('Obligatory field')), IS_NOT_IN_DB(db, 'dictionary.word',error_message=T('Already exists'))]
 db.dictionary.definition.requires = IS_NOT_EMPTY(error_message=T('Obligatory field'))
 db.dictionary.image.requires      = IS_IMAGE(extensions=('jpeg', 'png'), error_message=T('Invalid file'))
 

@@ -1,0 +1,17 @@
+{{extend 'layout.html'}}
+<div class="row">
+    <h2 class="text-center">{{=T('Edit definition') if word_id else T('New definition')}}</h2>
+    <hr>
+    <div class="col-md-10 col-md-offset-1">
+        {{=form}}
+    </div>
+</div>
+
+
+<script>
+$('#dictionary_image').attr('accept', 'image/*');
+
+$('#submit_record__row div').append("<a class='btn btn-danger pull-left' href='{{=URL('index')}}'>{{=T('Cancel')}}</a>");
+//Hacer el botón de enviar hacia la derecha
+$('.btn-primary').addClass('pull-right')
+</script>
