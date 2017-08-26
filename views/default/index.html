@@ -7,38 +7,73 @@
         <div class="content-center brand" id="econary">
             <div style="height:200px"></div> <!---space -->
             <h1 class="h1-seo">Diccionario económico</h1>
+            <h6>ECONARY</h6>
             <h5>Diccionario sobre términos relacionados a la economía, proyecto realizado para la clase de <strong>Microeconomía</strong> de la Universidad Mariano Galvez de Guatemala, Chimaltenango.</h5>
         </div>
     </div>
 </div>
 
 <div style="height:300px"></div> <!---space -->
+
 <div class="container-fluid">
     <div class="row" id="search">
         <div class="col-md-6 offset-md-3">
-            <h4 class="title text-center">My Portfolio</h4>
             <div class="nav-align-center">
                 <ul class="nav nav-pills nav-pills-primary" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#profile" role="tablist">
-                            <i class="now-ui-icons design_image"></i>
+                        <a class="nav-link active" data-toggle="tab" role="tablist">
+                            <i class="now-ui-icons ui-1_zoom-bold"></i>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#home" role="tablist">
-                            <i class="now-ui-icons location_world"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#messages" role="tablist">
-                            <i class="now-ui-icons sport_user-run"></i>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            <h4 class="title text-center">Buscar</h4>
+            {{=LOAD("default","search.load", ajax=True)}}
         </div>
     </div>
-    
+
+</div>
+
+<div style="height:150px"></div> <!---space -->
+
+<div id="about" class="section section-tabs" style="background-color:#EEEEEE">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <p class="category text-center">Acerca de..</p>
+                <!-- Tabs with Background on Card -->
+                <div class="card">
+                    <ul class="nav nav-tabs nav-tabs-neutral justify-content-center" role="tablist" data-background-color="orange">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#home1" role="tab">Elaborado por:</a>
+                        </li>
+                    </ul>
+                    <div class="card-block">
+                        <!-- Tab panes -->
+                        <div class="tab-content text-center">
+                            <div class="tab-pane active" id="home1" role="tabpanel">
+                                <div class="row">
+                                  <div class="col-md-4">
+                                      <p><strong>Juan Carlos Ovando Borrallo</strong></p>
+                                      <p>1990-16-23338</p>
+                                </div>
+                                <div class="col-md-4">
+                                      <p><strong>Kevin Jonathan Poyon Puluc</strong></p>
+                                      <p>1990-16-18938</p>
+                                  </div>
+
+                                  <div class="col-md-4">
+                                      <p><strong>José Luis Sucuc Otzoy</strong></p>
+                                      <p>1990-16-22240</p>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Tabs on plain Card -->
+            </div>
+        </div>
+    </div>
 </div>

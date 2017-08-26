@@ -20,6 +20,14 @@ def index():
     response.flash = T("Hello World")
     return dict(message=T('Welcome to web2py!'))
 
+def search():
+    suggestions = db(db.dictionary).select(db.dictionary.word)
+    search = request.vars.q
+    word = None
+
+    if search:
+        word = db(db.dictionary.word == search).select().first()
+    return dict(suggestions = suggestions, word = word)
 
 def user():
     """
@@ -57,5 +65,3 @@ def call():
     supports xml, json, xmlrpc, jsonrpc, amfrpc, rss, csv
     """
     return service()
-
-
