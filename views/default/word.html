@@ -1,0 +1,38 @@
+{{extend 'layout_indice.html'}}
+<div class="page-header clear-filter" filter-color="orange" style="height:300px">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');">
+    </div>
+    <div class="container">
+        <div class="content-center brand" id="econary">
+            <div style="height:200px"></div> <!---space -->
+            <h1 class="h1-seo">{{=word.word}}</h1>
+        </div>
+    </div>
+</div>
+
+<div style="height:150px"></div> <!---space -->
+
+<br><br>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="blockquote blockquote-primary text-center">
+
+                <p>{{=word.definition}}</p>
+
+                <img class="img-responsive center-block"
+                    src="{{=URL('download', args=word.image)}}"
+                    style="width:50%"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<center>
+    <a href="{{=URL('default','indice')}}" class="btn btn-lg btn-warning">
+        <i class="now-ui-icons arrows-1_minimal-left"></i>
+        Volver</a>
+</center>
+
+<hr>

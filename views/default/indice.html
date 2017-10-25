@@ -1,0 +1,46 @@
+{{extend 'layout_indice.html'}}
+
+<div class="page-header clear-filter" filter-color="orange" style="height:300px">
+    <div class="page-header-image" data-parallax="true" style="background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');">
+    </div>
+    <div class="container">
+        <div class="content-center brand" id="econary">
+            <div style="height:200px"></div> <!---space -->
+            <h1 class="h1-seo">ÍNDICE</h1>
+        </div>
+    </div>
+</div>
+
+<div style="height:150px"></div> <!---space -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <ol>
+            {{for word in words:}}
+              <h5><li><a href="{{=URL('default','word',vars=dict(word_id=word.id))}}">{{=word.word}}</a></li></h5>
+             {{pass}}
+            </ol>
+
+        </div>
+
+    </div>
+</div>
+<hr>
+
+
+
+
+
+<script>
+$("#principal").click();
+
+function scrollToDownload(name) {
+    element = '#' + name;
+    if ($(element).length != 0) {
+        $("html, body").animate({
+            scrollTop: $(element).offset().top
+        }, 1000);
+    }
+}
+</script>

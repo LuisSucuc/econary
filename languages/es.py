@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 {
 '': '',
+' Copyright': ' Copyright',
 '!langcode!': 'es',
 '!langname!': 'Español',
 '"update" is an optional expression like "field1=\'newvalue\'". You cannot update or delete the results of a JOIN': '"actualice" es una expresión opcional como "campo1=\'nuevo_valor\'". No se puede actualizar o eliminar resultados de un JOIN',

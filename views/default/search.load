@@ -4,29 +4,24 @@
 
 <div class="text-center">
     <form method="post">
-
-            <input id="hero-demo"  class="form-control"  autofocus type="text" name="q" placeholder="Buscar" >
-        </form>
+        <input id="hero-demo"  class="form-control"  autofocus type="text" name="q" placeholder="Buscar" >
+    </form>
 </div>
 
+{{if word:}}
 
-    {{if word:}}
+<br><br>
+    <div class="blockquote blockquote-primary text-center">
+        <h1>{{=word.word}}</h1>
 
-    <br><br>
-        <div class="blockquote blockquote-primary text-center">
-            <h1>{{=word.word}}</h1>
+        <p>{{=word.definition}}</p>
 
-            <p>{{=word.definition}}</p>
+        <img class="img-responsive center-block"
+            src="{{=URL('download', args=word.image)}}"
+            style="width:50%"/>
+    </div>
 
-            <img class="img-responsive center-block"
-                src="{{=URL('download', args=word.image)}}"
-                style="width:50%"/>
-        </div>
-
-
-
-
-    {{pass}}
+{{pass}}
 
 
 <script type="text/javascript">

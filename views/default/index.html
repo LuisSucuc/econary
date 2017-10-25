@@ -17,7 +17,7 @@
 
 <div class="container-fluid">
     <div class="row" id="search">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-10 offset-md-1">
             <div class="nav-align-center">
                 <ul class="nav nav-pills nav-pills-primary" role="tablist">
                     <li class="nav-item">
@@ -77,3 +77,17 @@
         </div>
     </div>
 </div>
+
+
+<script>
+$("#principal").click();
+
+function scrollToDownload(name) {
+    element = '#' + name;
+    if ($(element).length != 0) {
+        $("html, body").animate({
+            scrollTop: $(element).offset().top
+        }, 1000);
+    }
+}
+</script>

@@ -29,6 +29,18 @@ def search():
         word = db(db.dictionary.word == search).select().first()
     return dict(suggestions = suggestions, word = word)
 
+
+
+def indice():
+    words = db(db.dictionary).select()
+    return dict(words = words)
+
+
+def word():
+    word_id = request.vars.word_id or redirect(URL('default','indice'))
+    word = db(db.dictionary.id == word_id).select().first()
+    return dict(word = word)
+
 def user():
     """
     exposes:

@@ -55,7 +55,7 @@
         <div class="container">
             <div class="navbar-translate">
                 <h5>
-                <a class="navbar-brand" href="http://demos.creative-tim.com/now-ui-kit/index.html" rel="tooltip" title="Economic dictionary" data-placement="bottom" target="_blank">
+                <a class="navbar-brand" href="{{=URL('default','index')}}" rel="tooltip" title="Economic dictionary" data-placement="bottom">
                     <i class="now-ui-icons business_money-coins"></i>
                     ECONARY
                 </a>
@@ -64,7 +64,7 @@
             <div class="collapse navbar-collapse justify-content-end" id="navigation" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="scrollToDownload('econary')">
+                        <a id="principal" class="nav-link"  href="#" onclick="scrollToDownload('econary')">
                             <i class="now-ui-icons  files_paper"></i>
                             <p>Econary</p>
                         </a>
@@ -87,6 +87,12 @@
                         <a class="nav-link"  href="#" onclick="scrollToDownload('about')">
                             <i class="now-ui-icons travel_info"></i>
                             <p>Acerca de</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{=URL('default','indice')}}">
+                            <i class="now-ui-icons education_agenda-bookmark"></i>
+                            <p>Indice</p>
                         </a>
                     </li>
                     <li class="nav-item">
@@ -136,11 +142,12 @@
 
     {{block footer}} <!-- this is default footer -->
     <footer class="footer">
-      <div class="container-fluid">
-        <div class="copyright pull-left">{{=T('Copyright')}} &#169; {{=request.now.year}}</div>
-          <div id="poweredBy" class="pull-right">
+      <div class="container-fluid text-center">
+
+          <div id="poweredBy">
             {{=T('Powered by')}}
-            <a href="http://www.web2py.com/">web2py</a>
+            <a href="http://www.web2py.com/">web2py </a>
+            {{=T('Copyright')}} &#169; {{=request.now.year}}
           </div>
       </div>
     </footer>
@@ -154,15 +161,6 @@
     <script src="{{=URL('static','assets/js/now-ui-kit.js')}}"></script>
 
     <script type="text/javascript">
-    function scrollToDownload(name) {
-        element = '#' + name;
-        if ($(element).length != 0) {
-            $("html, body").animate({
-                scrollTop: $(element).offset().top
-            }, 1000);
-        }
-    }
-
     </script>
     {{block page_js}}{{end page_js}}
     {{if response.google_analytics_id:}}
