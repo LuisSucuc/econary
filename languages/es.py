@@ -156,6 +156,7 @@
 'Edit application': 'Editar aplicación',
 'edit controller': 'editar controlador',
 'Edit current record': 'Edite el registro actual',
+'Edit definition': 'Edit definition',
 'Edit Profile': 'Editar Perfil',
 'edit profile': 'editar perfil',
 'Edit This App': 'Edite esta App',

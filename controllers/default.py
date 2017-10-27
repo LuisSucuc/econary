@@ -32,7 +32,7 @@ def search():
 
 
 def indice():
-    words = db(db.dictionary).select()
+    words = db(db.dictionary).select(orderby=db.dictionary.word)
     return dict(words = words)
 
 

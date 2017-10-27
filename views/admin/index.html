@@ -2,7 +2,7 @@
 <div class="row">
     <h2 class="text-center">{{=T('Manage dictionary')}}</h2>
     <hr>
-    <div class="col-md-10 col-md-offset-1">
+    <div class="col-md-12">
         <table class="table table-hover ">
             <thead>
                 <tr>
@@ -25,8 +25,10 @@
                     </td>
                     <td>
                         <a class="btn btn-xs btn-info" href="{{=URL('edit',vars=dict(word_id=word.id))}}">{{=T('Edit')}}</a>
+                    </td>
+                    <td>
                         <a class="btn btn-xs btn-warning" href="{{=URL('delete',vars=dict(word_id=word.id))}}">{{=T('Delete')}}</a>
-                    </td
+                    </td>
                 </tr>
                 {{pass}}
             </tbody>
@@ -39,4 +41,4 @@
             {{=T('New definition')}}
         </a>
     </div>
-</div>
+</div><br><br>
